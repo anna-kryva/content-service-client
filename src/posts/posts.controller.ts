@@ -1,11 +1,12 @@
-import { Controller, Get } from '@nestjs/common';
+import { Controller, Get, UseGuards } from '@nestjs/common';
+import { AuthGuard } from '../auth/auth.guard';
 import { PostsService } from './posts.service';
 
 @Controller()
+@UseGuards(AuthGuard)
 export class PostsController {
   constructor(private postsService: PostsService) {}
 
-  // TODO: add guard
   @Get('posts')
   getAllPosts() {
     return this.postsService.findAll();
