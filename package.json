@@ -24,8 +24,10 @@
     "seed": "yarn ts-node src/seed.ts"
   },
   "dependencies": {
+    "@grpc/grpc-js": "^1.10.11",
     "@nestjs/common": "^10.0.0",
     "@nestjs/core": "^10.0.0",
+    "@nestjs/microservices": "^10.3.10",
     "@nestjs/platform-express": "^10.0.0",
     "@prisma/client": "5.10.2",
     "class-transformer": "^0.5.1",
